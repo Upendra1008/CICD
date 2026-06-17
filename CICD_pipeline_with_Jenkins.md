@@ -129,7 +129,7 @@ Updated Application
 ## Install Java
 
 ```bash
-sudo yum install java-17-amazon-corretto -y
+sudo yum install java-21-amazon-corretto -y
 ```
 
 ## Install Jenkins
