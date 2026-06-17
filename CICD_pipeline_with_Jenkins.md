@@ -145,9 +145,12 @@ sudo yum install jenkins -y
 ## Start Jenkins
 
 ```bash
-sudo systemctl start jenkins
-sudo systemctl enable jenkins
 When not start jenkins for check this command
+journalctl -u jenkins.service -n 100 --no-pager
+systemctl daemon-reload
+sudo systemctl start jenkins
+systemctl status jenkins
+sudo systemctl enable jenkins
 journalctl -u jenkins.service -n 100 --no-pager
 ```
 
