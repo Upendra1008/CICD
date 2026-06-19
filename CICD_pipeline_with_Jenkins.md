@@ -179,6 +179,10 @@ sudo systemctl enable docker
 sudo usermod -aG docker jenkins
 
 sudo systemctl restart jenkins
+id ginkins
+cat /etc/group | grep -i docker
+usermode -aG docker jenkins
+systemctl restart jenkins
 ```
 
 Verify:
@@ -188,6 +192,13 @@ docker ps
 ```
 
 ---
+# Install kubectl
+
+curl -LO https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubectl 
+
+chmod +x kubectl 
+
+mv kubectl /usr/local/bin/
 
 # ☸️ Phase 3 – Kubernetes Integration
 
