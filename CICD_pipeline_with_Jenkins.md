@@ -192,13 +192,6 @@ docker ps
 ```
 
 ---
-# Install kubectl
-
-curl -LO https://dl.k8s.io/release/v1.30.0/bin/linux/amd64/kubectl 
-
-chmod +x kubectl 
-
-mv kubectl /usr/local/bin/
 
 # ☸️ Phase 3 – Kubernetes Integration
 
@@ -213,6 +206,9 @@ sudo mv kubectl /usr/local/bin/
 ```
 
 Copy kubeconfig from Kubernetes Control Plane to Jenkins:
+On control plane:
+
+cat ~/.kube/config
 
 ```bash
 mkdir -p /var/lib/jenkins/.kube
